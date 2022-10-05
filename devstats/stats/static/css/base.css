@@ -1,0 +1,98 @@
+body {
+  background:#efefef;
+  font-family:'Helvetica Neue', Helvetica, sans-serif;
+  padding:20px;
+}
+
+h1 {
+  padding-bottom:30px;
+}
+
+a {
+  text-decoration:none;
+  color:#72BA8F;
+}
+
+#header {
+  width:100%;
+  overflow:auto;
+}
+
+#header ul {
+  list-style: none;
+  margin:0;
+  padding:0;
+}
+
+#header ul li {
+  list-style: none;
+  float:left;
+  border-radius:4px;
+  background:#fff;
+  padding:6px 10px;
+  margin:0 20px 0 0;
+}
+
+div.developer {
+  background:#fff;
+  border-radius:4px;
+  width:160px;
+  height:auto;
+  color:#333;
+  padding:0 20px 20px;
+  font-size:14px;
+  line-height: 1.5;
+  float:left;
+  margin:20px 20px 20px 0;
+}
+
+div.developer img {
+  width:100px;
+  border-radius:50%;
+  margin:-20px 26px 20px;
+  border:4px solid #fff;
+}
+
+div.developer a {
+  font-weight:bold;
+}
+
+div.developer.detail {
+  float:none;
+  margin: 40px auto;
+  width: 50%;
+}
+
+div.developer.detail img {
+  width:180px;
+}
+
+div.repo {
+  background:#efefef;
+  overflow:auto;
+  padding:10px 20px;
+  border-radius:4px;
+  margin-bottom:10px;
+}
+
+input[type=text] {
+  border:0;
+  padding:6px 10px;
+  border-radius:4px;
+}
+
+a.button, input[type=submit] {
+  border:0;
+  margin:20px 0;
+  background:#72BA8F;
+  color:#fff;
+  padding:10px 20px;
+  font-weight:bold;
+  border-radius:4px;
+
+}
+
+.avatar {
+  border-radius:50%;
+  width:200px;
+}

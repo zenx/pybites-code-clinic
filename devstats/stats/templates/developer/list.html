@@ -1,0 +1,18 @@
+{% extends "base.html" %}
+
+{% block title %}Developers{% endblock %}
+
+{% block content %}
+  <h1>Developers</h1>
+  {% for developer in developers %}
+    <div class="developer">
+      <a href="{% url 'developer_detail' developer.username %}">
+        {{ developer.username }}
+      </a>
+      <br>
+      {{ developer.name }}
+      {{ developer.location }}
+      ...
+    </div>
+  {% endfor %}
+{% endblock %}
