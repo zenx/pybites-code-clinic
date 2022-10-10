@@ -1,9 +1,26 @@
 {% extends "base.html" %}
 
-{% block title %}{{ developer.username }}{% endblock %}
+{% block title %}
+  {{ developer.username }}
+{% endblock %}
 
 {% block content %}
-  <h1>{{ developer.username }}</h1>
-  {{ developer.name }}<br>
-  {{ developer.location }}<br>
+  <div class="developer detail">
+    <img src="{{ developer.avatar_url }}" class="avatar">
+    <h1>{{ developer.username }}</h1>
+    {% with developer.repos.count as total_repos %}
+      <h2>{{ total_repos }} repo{{ total_repos|pluralize }}</h2>
+    {% endwith %}
+    {{ developer.name }}<br>
+    {{ developer.location }}<br>
+    <h3>Top repos</h3>
+    {% for repo in top_repos %}
+      <div class="repo">
+        <a href="{{ repo.get_github_url }}">{{ repo.name }}</a><br>
+        {{ repo.stargazers_count }}<br>
+        {{ repo.forks_count }}<br>
+        {{ repo.watchers_count }}
+      </div>
+    {% endfor %}
+  </div>
 {% endblock %}

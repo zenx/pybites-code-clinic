@@ -7,12 +7,18 @@
   {% for developer in developers %}
     <div class="developer">
       <a href="{% url 'developer_detail' developer.username %}">
+        <img src="{{ developer.avatar_url }}">
+      </a>
+      <a href="{% url 'developer_detail' developer.username %}">
         {{ developer.username }}
       </a>
       <br>
-      {{ developer.name }}
-      {{ developer.location }}
-      ...
+      {{ developer.name }}<br>
+      {{ developer.location }}<br>
+      Repos: {{ developer.total_repos }}<br>
+      Followers: {{ developer.total_followers }}<br>
+      Following: {{ developer.total_following }}<br>
+
     </div>
   {% endfor %}
 {% endblock %}
