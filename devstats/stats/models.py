@@ -31,7 +31,7 @@ class Developer(models.Model):
         return self.username
 
     def _get_github_user(self):
-        if self._gh_user == None:
+        if self._gh_user is None:
             gh = Github(settings.GITHUB_TOKEN,
                         per_page=settings.GITHUB_OBJECTS_PER_PAGE)
             self._gh_user = gh.get_user(self.username)
